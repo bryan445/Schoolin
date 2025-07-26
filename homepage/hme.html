@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Schoolin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      width: 400px;
+      position: relative;
+      padding: 30px 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .welcome h2 {
+      font-size: 24px;
+      color: #1976d2;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: #0d47a1;
+      font-weight: bold;
+    }
+
+    .welcome p {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    #searchBar {
+      width: 100%;
+      padding: 12px 40px 12px 12px;
+      font-size: 16px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 30px;
+      top: 127px; /* Adjust based on layout */
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      pointer-events: none;
+      fill: #888;
+    }
+
+    #dropdown {
+      position: absolute;
+      top: 160px;
+      left: 20px;
+      width: calc(100% - 40px);
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      max-height: 200px;
+      overflow-y: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      display: none;
+    }
+
+    #dropdown li {
+      list-style: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-bottom: 1px solid #eee;
+    }
+
+    #dropdown li:last-child {
+      border-bottom: none;
+    }
+
+    #dropdown li:hover,
+    #dropdown li.focused {
+      background-color: #1976d2;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="welcome">
+      <h2>Welcome to <span class="highlight">Schoolin</span> App</h2>
+      <p>Please enter the name of your school and click on it from the list below.</p>
+    </div>
+
+    <input
+      type="text"
+      id="searchBar"
+      placeholder="Search for your school..."
+      autocomplete="off"
+      aria-autocomplete="list"
+      aria-controls="dropdown"
+      aria-expanded="false"
+    />
+
+    <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M10 2a8 8 0 105.293 14.293l4.853 4.853 1.414-1.414-4.853-4.853A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"
+      />
+    </svg>
+
+    <ul id="dropdown" role="listbox"></ul>
+  </div>
+
+  <script>
+    let schools = [];
+    let filteredSchools = [];
+    let focusedIndex = -1;
+
+    const searchBar = document.getElementById("searchBar");
+    const dropdown = document.getElementById("dropdown");
+
+    function renderDropdown(filter) {
+      dropdown.innerHTML = "";
+      focusedIndex = -1;
+
+      if (!filter) {
+        dropdown.style.display = "none";
+        searchBar.setAttribute("aria-expanded", "false");
+        return;
+      }
+
+      filteredSchools = schools.filter((school) =>
+        school.name.toLowerCase().includes(filter.toLowerCase())
+      );
+
+      if (filteredSchools.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No schools found.";
+        li.setAttribute("aria-disabled", "true");
+        dropdown.appendChild(li);
+      } else {
+        filteredSchools.forEach((school, i) => {
+          const li = document.createElement("li");
+          li.textContent = school.name;
+          li.setAttribute("role", "option");
+          li.setAttribute("tabindex", "-1");
+          li.dataset.index = i;
+
+          li.addEventListener("click", () => {
+            window.location.href = school.link;
+          });
+
+          li.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+              window.location.href = school.link;
+            }
+          });
+
+          dropdown.appendChild(li);
+        });
+      }
+
+      dropdown.style.display = "block";
+      searchBar.setAttribute("aria-expanded", "true");
+    }
+
+    function updateFocus(newIndex) {
+      const items = dropdown.querySelectorAll('li[role="option"]');
+      if (items.length === 0) return;
+
+      if (focusedIndex >= 0 && items[focusedIndex]) {
+        items[focusedIndex].classList.remove("focused");
+      }
+
+      if (newIndex < 0) newIndex = items.length - 1;
+      if (newIndex >= items.length) newIndex = 0;
+
+      focusedIndex = newIndex;
+      const focusedItem = items[focusedIndex];
+      focusedItem.classList.add("focused");
+      focusedItem.focus();
+    }
+
+    searchBar.addEventListener("input", (e) => {
+      if (schools.length === 0) return;
+      renderDropdown(e.target.value);
+    });
+
+    searchBar.addEventListener("keydown", (e) => {
+      const items = dropdown.querySelectorAll('li[role="option"]');
+      if (dropdown.style.display === "none" || items.length === 0) return;
+
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        updateFocus(focusedIndex + 1);
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        updateFocus(focusedIndex - 1);
+      } else if (e.key === "Enter") {
+        if (focusedIndex >= 0) {
+          e.preventDefault();
+          window.location.href = filteredSchools[focusedIndex].link;
+        }
+      } else if (e.key === "Escape") {
+        dropdown.style.display = "none";
+        searchBar.setAttribute("aria-expanded", "false");
+        searchBar.value = "";
+        focusedIndex = -1;
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".container")) {
+        dropdown.style.display = "none";
+        searchBar.setAttribute("aria-expanded", "false");
+        focusedIndex = -1;
+      }
+    });
+
+    fetch("schlist.json")
+      .then((response) => response.json())
+      .then((data) => {
+        schools = data;
+      })
+      .catch((err) => {
+        console.error("Failed to load schools:", err);
+      });
+  </script>
+</body>
+</html>

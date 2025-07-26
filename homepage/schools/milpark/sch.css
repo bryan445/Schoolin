@@ -1,0 +1,177 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styling */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+/* Header section with logo and school info */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.school-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.school-info h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.slogan {
+  margin: 0;
+  font-style: italic;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Button group styles */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0f4a85;
+}
+
+/* Forms */
+.form-box {
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Fees and results display boxes */
+.fees-result, #resultsDisplay {
+  background-color: #e8f5e9;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #2e7d32;
+}
+
+ul#subjectScores {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul#subjectScores li {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #333;
+}
+
+/* News section */
+.news {
+  background-color: #fffde7;
+  border-left: 6px solid #fbc02d;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 2rem auto;
+  color: #8a6d0a;
+}
+
+/* Footer */
+footer.contact {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+footer.contact h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Footer icons container */
+footer.contact .icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+/* Individual icon styling */
+footer.contact .icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+footer.contact .icons a svg {
+  width: 28px;
+  height: 28px;
+  fill: #555;
+  transition: fill 0.3s ease;
+}
+
+/* Hover effect */
+footer.contact .icons a:hover {
+  background-color: #1976d2;
+  transform: scale(1.15);
+}
+
+footer.contact .icons a:hover svg {
+  fill: white;
+}

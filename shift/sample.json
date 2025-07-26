@@ -1,0 +1,42 @@
+{
+  "Form 1": [
+    {
+      "regNumber": "1001",
+      "name": "Alice Njeri",
+      "fees": {
+        "total": 45000,
+        "firstPayment": 10000,
+        "secondPayment": 5000,
+        "balance": 30000
+      },
+      "results": {
+        "subjects": {
+          "English": 55,
+          "Math": 40,
+          "Biology": 35
+        },
+        "remarks": "Needs to improve in Chemistry and Biology."
+      }
+    }
+  ],
+  "Form 3": [
+    {
+      "regNumber": "1102",
+      "name": "Brian Mvula",
+      "fees": {
+        "total": 45000,
+        "firstPayment": 20000,
+        "secondPayment": 20000,
+        "balance": 5000
+      },
+      "results": {
+        "subjects": {
+          "English": 85,
+          "Math": 90,
+          "Biology": 75
+        },
+        "remarks": "Excellent performance. Keep it up!"
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Editor</title>
+  <link rel="stylesheet" href="editor.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Offline Student Editor</h1>
+    <label for="studentSelect">Select Student:</label>
+    <select id="studentSelect">
+      <option value="">-- Select a student --</option>
+    </select>
+
+    <form id="studentForm" style="display:none;">
+      <h3>Edit Student Info</h3>
+      <label>Name: <input type="text" id="name" /></label><br />
+      <label>Total Fees: <input type="number" id="total" /></label><br />
+      <label>First Payment: <input type="number" id="firstPayment" /></label><br />
+      <label>Second Payment: <input type="number" id="secondPayment" /></label><br />
+      <label>Balance: <input type="number" id="balance" /></label><br />
+      <label>Math: <input type="number" id="Math" /></label><br />
+      <label>English: <input type="number" id="English" /></label><br />
+      <label>Biology: <input type="number" id="Biology" /></label><br />
+      <label>Remarks:<br />
+        <textarea id="remarks" rows="3" cols="30"></textarea>
+      </label><br /><br />
+      <button type="submit">Save</button>
+    </form>
+
+    <pre id="outputJson"></pre>
+  </div>
+
+  <script src="editor.js"></script>
+</body>
+</html>

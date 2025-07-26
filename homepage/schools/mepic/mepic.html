@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chisomo Academy</title>
+  <link rel="stylesheet" href="sch.css" />
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <img src="images/logo.png" alt="Chisomo Academy Logo" class="school-logo" />
+      <div class="school-info">
+        <h1 id="schoolName">Chisomo Academy</h1>
+        <p class="slogan">“Empowering Minds, Shaping Futures”</p>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button onclick="showFeesForm()">Check School Fees</button>
+      <button onclick="goToResults()">Check Exam Results</button>
+      <button onclick="admissionForm()">Admissions</button>
+    </div>
+
+    <!-- FEES FORM -->
+    <div id="feesForm" class="form-box" style="display:none;">
+      <h2>Enter Details to View School Fees</h2>
+      <input type="text" id="classInput" placeholder="Enter Class (e.g. Form 2)" />
+      <input type="text" id="nameInput" placeholder="Enter Student Name" />
+      <button onclick="submitFees()">View Fees</button>
+    </div>
+
+    <!-- FEES RESULT -->
+    <div id="feesResult" class="fees-result" style="display:none;">
+      <h3>School Fees Info</h3>
+      <p><strong>Student:</strong> <span id="displayStudentName"></span></p>
+      <p><strong>Class:</strong> <span id="displayClass"></span></p>
+      <p><strong>Total Fees:</strong> MK <span id="displayTotal"></span></p>
+      <p><strong>First Payment:</strong> MK <span id="displayFirst"></span></p>
+      <p><strong>Second Payment:</strong> MK <span id="displaySecond"></span></p>
+      <p><strong>Balance:</strong> MK <span id="displayBalance"></span></p>
+    </div>
+
+    <!-- RESULTS FORM -->
+    <div id="resultsSection" class="form-box" style="display:none;">
+      <h2>Enter Details to View Exam Results</h2>
+      <input type="text" id="resClassInput" placeholder="Enter Class (e.g. Form 4)" />
+      <input type="text" id="resRegInput" placeholder="Enter Registration Number (e.g. 1002)" />
+      <button onclick="submitResults()">View Results</button>
+    </div>
+
+    <!-- RESULTS DISPLAY -->
+    <div id="resultsDisplay" style="display:none;">
+      <h3>Exam Results</h3>
+      <p><strong>Student:</strong> <span id="resStudentName"></span></p>
+      <p><strong>Class:</strong> <span id="resStudentClass"></span></p>
+      <ul id="subjectScores"></ul>
+      <p><strong>Remarks:</strong> <span id="resRemarks"></span></p>
+    </div>
+
+    <!-- NEWS -->
+    <div class="news" id="newsSection">
+      <h2>📢 News &amp; Announcements</h2>
+      <p>Midterm examinations begin on Tuesday at 10:00 AM.</p>
+      <p>Fees balances must be cleared by 13<sup>th</sup> August 2025.</p>
+      <p>There will be a Parent Teacher Meeting 24<sup>th</sup> August 2025.</p>
+    </div>
+
+    <footer class="contact">
+      <h2>Contact Us</h2>
+      <div class="icons">
+        <a href="https://wa.me/265991234567" target="_blank" title="WhatsApp" aria-label="WhatsApp" class="icon-link">
+          <img src="icons/whatsapp.svg" alt="WhatsApp" />
+        </a>
+        <a href="https://tiktok.com/@chisomoacademy" target="_blank" title="TikTok" aria-label="TikTok" class="icon-link">
+          <img src="icons/tiktok.svg" alt="TikTok" />
+        </a>
+        <a href="https://facebook.com/ngomsSchool" target="_blank" title="Facebook" aria-label="Facebook" class="icon-link">
+          <img src="icons/facebook.svg" alt="Facebook" />
+        </a>
+        <a href="mailto:info@chisomoacademy.com" title="Email" aria-label="Email" class="icon-link">
+          <img src="icons/gmail.svg" alt="Email" />
+        </a>
+        <a href="tel:+265991234567" title="Call" aria-label="Call" class="icon-link">
+          <img src="icons/call.svg" alt="Phone Call" />
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="sch.js"></script>
+</body>
+</html>

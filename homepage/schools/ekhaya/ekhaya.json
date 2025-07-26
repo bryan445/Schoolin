@@ -1,0 +1,137 @@
+{
+  "Grade 1": [
+    {
+      "regNumber": "1001",
+      "name": "Alice Njeri",
+      "fees": {
+        "total": 45000,
+        "firstPayment": 10000,
+        "secondPayment": 5000,
+        "balance": 30000
+      },
+      "results": {
+        "subjects": {
+          "English": 55,
+          "Math": 40,
+          "Biology": 35,
+          "Chemistry": 29,
+          "Physics": 68
+        },
+        "remarks": "Needs to improve in Chemistry and Biology."
+      }
+    },
+    {
+      "regNumber": "1002",
+      "name": "Brian Otieno",
+      "fees": {
+        "total": 45000,
+        "firstPayment": 20000,
+        "secondPayment": 20000,
+        "balance": 5000
+      },
+      "results": {
+        "subjects": {
+          "English": 85,
+          "Math": 90,
+          "Geography": 75,
+          "History": 70,
+          "Agriculture": 82
+        },
+        "remarks": "Excellent performance. Keep it up!"
+      }
+    }
+  ],
+  "Grade 2": [
+    {
+      "regNumber": "2001",
+      "name": "Charles Mwale",
+      "fees": {
+        "total": 40000,
+        "firstPayment": 15000,
+        "secondPayment": 10000,
+        "balance": 15000
+      },
+      "results": {
+        "subjects": {
+          "English": 60,
+          "Math": 70,
+          "Biology": 55,
+          "Chemistry": 65,
+          "Physics": 75,
+          "Chichewa": 90,
+          "Agriculture":32
+        },
+        "remarks": "Good overall performance."
+      }
+    }
+  ],
+  "Grade 3": [
+    {
+      "regNumber": "2001",
+      "name": "Maxwell Phiri",
+      "fees": {
+        "total": 140000,
+        "firstPayment": 100000,
+        "secondPayment": 40000,
+        "balance": 0
+      },
+      "results": {
+        "subjects": {
+          "English": 60,
+          "Math": 70,
+          "Biology": 55,
+          "Chemistry": 65,
+          "Physics": 75,
+          "Chichewa": 90,
+          "Agriculture":32
+        },
+        "remarks": "Good overall performance."
+      }
+    }
+  ],
+  "Grade 4": [
+    {
+      "regNumber": "2001",
+      "name": "Charles Mwale",
+      "fees": {
+        "total": 40000,
+        "firstPayment": 15000,
+        "secondPayment": 10000,
+        "balance": 15000
+      },
+      "results": {
+        "subjects": {
+          "English": 60,
+          "Math": 70,
+          "Biology": 55,
+          "Chemistry": 65,
+          "Physics": 75,
+          "Chichewa": 90,
+          "Agriculture":32
+        },
+        "remarks": "Good overall performance."
+      }
+    }
+  ],
+  "Grade 5": [
+    {
+      "regNumber": "2001",
+      "name": "John Mwale",
+      "fees": {
+        "total": 40000,
+        "firstPayment": 15000,
+        "secondPayment": 10000,
+        "balance": 15000
+      },
+      "results": {
+        "subjects": {
+          "English": 60,
+          "Math": 70,
+          "Chichewa": 90,
+          "Agriculture":32
+        },
+        "remarks": "Good overall performance."
+      }
+    }
+  ]
+}
