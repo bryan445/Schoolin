@@ -1,0 +1,45 @@
+[
+  {
+    "id": "SHS004",
+    "name": "Mercy Gondwe",
+    "class": "Form 1",
+    "guardian": "Mr. Daniel Gondwe",
+    "phone": "+265 666 777 888",
+    "email": "daniel.gondwe@email.com",
+    "address": "Plot 23, Luwinga, Mzuzu",
+    "dateOfBirth": "2010-08-07",
+    "admissionDate": "2023-01-11",
+    "fees": {
+      "totalOwed": 260000,
+      "totalPaid": 220000,
+      "balance": 40000,
+      "nextPaymentDue": "2024-12-12"
+    },
+    "results": {
+      "term1": {
+        "english": 86,
+        "mathematics": 84,
+        "science": 88,
+        "physics": 85,
+        "chemistry": 82,
+        "overall": "A-"
+      },
+      "term2": {
+        "english": 88,
+        "mathematics": 87,
+        "science": 90,
+        "physics": 88,
+        "chemistry": 85,
+        "overall": "A"
+      },
+      "term3": {
+        "english": 90,
+        "mathematics": 89,
+        "science": 92,
+        "physics": 90,
+        "chemistry": 87,
+        "overall": "A"
+      }
+    }
+  }
+]

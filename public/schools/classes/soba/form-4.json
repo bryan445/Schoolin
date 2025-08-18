@@ -1,0 +1,48 @@
+[
+  {
+    "id": "SHS001",
+    "name": "David Nyasulu",
+    "class": "Form 4",
+    "guardian": "Mrs. Agnes Nyasulu",
+    "phone": "+265 999 111 222",
+    "email": "agnes.nyasulu@email.com",
+    "address": "Plot 45, Mzimba Street, Mzuzu",
+    "dateOfBirth": "2007-06-11",
+    "admissionDate": "2020-01-10",
+    "fees": {
+      "totalOwed": 330000,
+      "totalPaid": 280000,
+      "balance": 50000,
+      "nextPaymentDue": "2024-12-25"
+    },
+    "results": {
+      "term1": {
+        "english": 83,
+        "mathematics": 91,
+        "science": 89,
+        "physics": 87,
+        "chemistry": 85,
+        "overall": "A-",
+        "finalPoints": 8
+      },
+      "term2": {
+        "english": 85,
+        "mathematics": 93,
+        "science": 91,
+        "physics": 89,
+        "chemistry": 87,
+        "overall": "A",
+        "finalPoints": 7
+      },
+      "term3": {
+        "english": 87,
+        "mathematics": 95,
+        "science": 93,
+        "physics": 91,
+        "chemistry": 89,
+        "overall": "A",
+        "finalPoints": 6
+      }
+    }
+  }
+]
