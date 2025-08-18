@@ -1,0 +1,48 @@
+[
+  {
+    "id": "SHS002",
+    "name": "Faith Tembo",
+    "class": "Form 3",
+    "guardian": "Mr. Robert Tembo",
+    "phone": "+265 888 333 444",
+    "email": "robert.tembo@email.com",
+    "address": "House 12, Chibavi, Mzuzu",
+    "dateOfBirth": "2008-02-25",
+    "admissionDate": "2021-01-12",
+    "fees": {
+      "totalOwed": 300000,
+      "totalPaid": 250000,
+      "balance": 50000,
+      "nextPaymentDue": "2024-12-18"
+    },
+    "results": {
+      "term1": {
+        "english": 79,
+        "mathematics": 82,
+        "science": 84,
+        "physics": 80,
+        "chemistry": 78,
+        "overall": "B+",
+        "finalPoints": 13
+      },
+      "term2": {
+        "english": 82,
+        "mathematics": 85,
+        "science": 87,
+        "physics": 83,
+        "chemistry": 81,
+        "overall": "A-",
+        "finalPoints": 11
+      },
+      "term3": {
+        "english": 84,
+        "mathematics": 87,
+        "science": 89,
+        "physics": 85,
+        "chemistry": 83,
+        "overall": "A-",
+        "finalPoints": 10
+      }
+    }
+  }
+]

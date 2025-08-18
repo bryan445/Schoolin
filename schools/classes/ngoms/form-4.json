@@ -1,0 +1,123 @@
+[
+  {
+    "id": "BFS001",
+    "name": "Thandiwe Kachala",
+    "class": "Form 4",
+    "guardian": "Mr. George Kachala",
+    "phone": "+265 999 987 654",
+    "email": "george.kachala@email.com",
+    "address": "Plot 67, Ndirande, Blantyre",
+    "dateOfBirth": "2007-01-28",
+    "admissionDate": "2020-02-01",
+    "fees": {
+      "totalOwed": 320000,
+      "totalPaid": 270000,
+      "balance": 50000,
+      "nextPaymentDue": "2024-12-20"
+    },
+    "results": {
+      "term1": {
+        "firstAssessment": {
+          "english": 79,
+          "mathematics": 77,
+          "science": 81,
+          "biology": 83,
+          "chemistry": 76,
+          "date": "2024-03-15",
+          "average": 79.2
+        },
+        "secondAssessment": {
+          "english": 81,
+          "mathematics": 79,
+          "science": 83,
+          "biology": 85,
+          "chemistry": 78,
+          "date": "2024-05-20",
+          "average": 81.2
+        },
+        "finalExam": {
+          "english": 83,
+          "mathematics": 81,
+          "science": 85,
+          "biology": 87,
+          "chemistry": 80,
+          "date": "2024-07-10",
+          "average": 83.2
+        },
+        "termAverage": 81.2,
+        "termGrade": "B+",
+        "finalPoints": 13,
+        "position": 7,
+        "totalStudents": 28
+      },
+      "term2": {
+        "firstAssessment": {
+          "english": 82,
+          "mathematics": 80,
+          "science": 84,
+          "biology": 86,
+          "chemistry": 79,
+          "date": "2024-09-15",
+          "average": 82.2
+        },
+        "secondAssessment": {
+          "english": 84,
+          "mathematics": 82,
+          "science": 86,
+          "biology": 88,
+          "chemistry": 81,
+          "date": "2024-11-20",
+          "average": 84.2
+        },
+        "finalExam": {
+          "english": 86,
+          "mathematics": 84,
+          "science": 88,
+          "biology": 90,
+          "chemistry": 83,
+          "date": "2025-01-10",
+          "average": 86.2
+        },
+        "termAverage": 84.2,
+        "termGrade": "A-",
+        "finalPoints": 11,
+        "position": 5,
+        "totalStudents": 28
+      },
+      "term3": {
+        "firstAssessment": {
+          "english": 84,
+          "mathematics": 83,
+          "science": 86,
+          "biology": 88,
+          "chemistry": 81,
+          "date": "2025-03-15",
+          "average": 84.4
+        },
+        "secondAssessment": {
+          "english": 86,
+          "mathematics": 85,
+          "science": 88,
+          "biology": 90,
+          "chemistry": 83,
+          "date": "2025-05-20",
+          "average": 86.4
+        },
+        "finalExam": {
+          "english": 88,
+          "mathematics": 87,
+          "science": 90,
+          "biology": 92,
+          "chemistry": 85,
+          "date": "2025-07-10",
+          "average": 88.4
+        },
+        "termAverage": 86.4,
+        "termGrade": "A-",
+        "finalPoints": 11,
+        "position": 4,
+        "totalStudents": 28
+      }
+    }
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "id": "SHS003",
+    "name": "Peter Mwale",
+    "class": "Form 2",
+    "guardian": "Mrs. Esther Mwale",
+    "phone": "+265 777 555 666",
+    "email": "esther.mwale@email.com",
+    "address": "Block 8, Katoto, Mzuzu",
+    "dateOfBirth": "2009-10-19",
+    "admissionDate": "2022-01-15",
+    "fees": {
+      "totalOwed": 280000,
+      "totalPaid": 200000,
+      "balance": 80000,
+      "nextPaymentDue": "2024-11-28"
+    },
+    "results": {
+      "term1": {
+        "english": 70,
+        "mathematics": 73,
+        "science": 75,
+        "physics": 72,
+        "chemistry": 69,
+        "overall": "B"
+      },
+      "term2": {
+        "english": 73,
+        "mathematics": 76,
+        "science": 78,
+        "physics": 75,
+        "chemistry": 72,
+        "overall": "B"
+      },
+      "term3": {
+        "english": 75,
+        "mathematics": 78,
+        "science": 80,
+        "physics": 77,
+        "chemistry": 74,
+        "overall": "B+"
+      }
+    }
+  }
+]

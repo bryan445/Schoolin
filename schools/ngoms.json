@@ -1,0 +1,86 @@
+{
+  "name": "Ngoms",
+  "location": "Blantyre",
+  "motto": "Building Tomorrow's Leaders Today",
+  "fees": "MK 200,000 per term",
+  "detailedFees": {
+    "nursery": {
+      "level": "Early Childhood Development (3-5 years)",
+      "tuitionFee": "MK 90,000 per term",
+      "admissionFee": "MK 18,000 (one-time)",
+      "developmentFee": "MK 30,000 per year",
+      "uniformFee": "MK 40,000 (optional)",
+      "booksAndMaterials": "MK 25,000 per year",
+      "total": "MK 105,000 per term (excluding one-time fees)"
+    },
+    "primary": {
+      "level": "Primary Education (Standard 1-8)",
+      "tuitionFee": "MK 160,000 per term",
+      "admissionFee": "MK 25,000 (one-time)",
+      "developmentFee": "MK 40,000 per year",
+      "uniformFee": "MK 50,000 (optional)",
+      "booksAndMaterials": "MK 35,000 per year",
+      "examFees": "MK 18,000 per year",
+      "computerLab": "MK 15,000 per year",
+      "total": "MK 175,000 per term (excluding one-time fees)"
+    },
+    "secondary": {
+      "level": "Secondary Education (Form 1-4)",
+      "tuitionFee": "MK 200,000 per term",
+      "admissionFee": "MK 30,000 (one-time)",
+      "developmentFee": "MK 50,000 per year",
+      "uniformFee": "MK 60,000 (optional)",
+      "booksAndMaterials": "MK 45,000 per year",
+      "examFees": "MK 30,000 per year (MSCE: MK 40,000)",
+      "laboratoryFee": "MK 25,000 per year",
+      "computerLab": "MK 20,000 per year",
+      "total": "MK 220,000 per term (excluding one-time fees)"
+    },
+    "additionalInfo": "Payment plans available with 0% interest for up to 6 months. Early bird discount of 15% for fees paid before term starts. Merit scholarships available for top performers. Bus transportation available at MK 30,000 per term."
+  },
+  "results": "Results can be collected from the head teacher's office.",
+  "about": "Bright Future School has been shaping young minds since 1992. Located in the commercial hub of Blantyre, we offer comprehensive education from primary to secondary level with a focus on academic excellence and character development.",
+  "admissionInfo": {
+    "requirements": "Birth certificate, Previous academic records, Health certificate, 2 passport photos",
+    "process": "Submit application online or visit school, Pay registration fee MK 8,000, Take entrance examination, Interview with parents",
+    "deadline": "Registration closes January 31st annually",
+    "contact": "Phone: +265 1 876 543 | Email: info@brightfuture.edu.mw"
+  },
+  "news": [
+    {
+      "title": "Digital Learning Initiative",
+      "date": "2025-01-08",
+      "content": "We have launched our digital learning platform with tablets for all students. This will enhance interactive learning and prepare students for the digital age."
+    },
+    {
+      "title": "Mathematics Competition Winners",
+      "date": "2024-12-20",
+      "content": "Our students won first place in the Southern Region Mathematics Competition. Congratulations to the mathematics department and participating students!"
+    },
+    {
+      "title": "New Dormitory Complex",
+      "date": "2024-12-10",
+      "content": "Construction of our new dormitory complex is now complete, providing comfortable accommodation for 200 additional students."
+    }
+  ],
+  "announcements": [
+    {
+      "title": "School Fees Payment Deadline",
+      "date": "2025-01-14",
+      "content": "All school fees for Term 1 must be paid by January 30th. Late payments will incur a penalty of MK 5,000.",
+      "urgent": true
+    },
+    {
+      "title": "Cultural Day Celebration",
+      "date": "2025-01-10",
+      "content": "Annual cultural day will be celebrated on February 15th. Students should prepare traditional performances and attire.",
+      "urgent": false
+    },
+    {
+      "title": "Vaccination Drive",
+      "date": "2025-01-06",
+      "content": "Free vaccination program for all students will be conducted on January 28th in partnership with Blantyre Health Office.",
+      "urgent": false
+    }
+  ]
+}

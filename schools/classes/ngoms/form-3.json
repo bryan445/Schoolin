@@ -1,0 +1,123 @@
+[
+  {
+    "id": "BFS002",
+    "name": "Emmanuel Chirwa",
+    "class": "Form 3",
+    "guardian": "Mrs. Mary Chirwa",
+    "phone": "+265 888 876 543",
+    "email": "mary.chirwa@email.com",
+    "address": "House 23, Soche, Blantyre",
+    "dateOfBirth": "2008-09-14",
+    "admissionDate": "2021-02-15",
+    "fees": {
+      "totalOwed": 290000,
+      "totalPaid": 190000,
+      "balance": 100000,
+      "nextPaymentDue": "2025-02-01"
+    },
+    "results": {
+      "term1": {
+        "firstAssessment": {
+          "english": 74,
+          "mathematics": 86,
+          "science": 83,
+          "biology": 80,
+          "chemistry": 77,
+          "date": "2024-03-15",
+          "average": 80.0
+        },
+        "secondAssessment": {
+          "english": 76,
+          "mathematics": 88,
+          "science": 85,
+          "biology": 82,
+          "chemistry": 79,
+          "date": "2024-05-20",
+          "average": 82.0
+        },
+        "finalExam": {
+          "english": 78,
+          "mathematics": 90,
+          "science": 87,
+          "biology": 84,
+          "chemistry": 81,
+          "date": "2024-07-10",
+          "average": 84.0
+        },
+        "termAverage": 82.0,
+        "termGrade": "B+",
+        "finalPoints": 11,
+        "position": 4,
+        "totalStudents": 30
+      },
+      "term2": {
+        "firstAssessment": {
+          "english": 77,
+          "mathematics": 89,
+          "science": 86,
+          "biology": 83,
+          "chemistry": 80,
+          "date": "2024-09-15",
+          "average": 83.0
+        },
+        "secondAssessment": {
+          "english": 79,
+          "mathematics": 91,
+          "science": 88,
+          "biology": 85,
+          "chemistry": 82,
+          "date": "2024-11-20",
+          "average": 85.0
+        },
+        "finalExam": {
+          "english": 81,
+          "mathematics": 93,
+          "science": 90,
+          "biology": 87,
+          "chemistry": 84,
+          "date": "2025-01-10",
+          "average": 87.0
+        },
+        "termAverage": 85.0,
+        "termGrade": "A-",
+        "finalPoints": 9,
+        "position": 3,
+        "totalStudents": 30
+      },
+      "term3": {
+        "firstAssessment": {
+          "english": 79,
+          "mathematics": 91,
+          "science": 88,
+          "biology": 85,
+          "chemistry": 83,
+          "date": "2025-03-15",
+          "average": 85.2
+        },
+        "secondAssessment": {
+          "english": 81,
+          "mathematics": 93,
+          "science": 90,
+          "biology": 87,
+          "chemistry": 85,
+          "date": "2025-05-20",
+          "average": 87.2
+        },
+        "finalExam": {
+          "english": 83,
+          "mathematics": 95,
+          "science": 92,
+          "biology": 89,
+          "chemistry": 87,
+          "date": "2025-07-10",
+          "average": 89.2
+        },
+        "termAverage": 87.2,
+        "termGrade": "A",
+        "finalPoints": 14,
+        "position": 2,
+        "totalStudents": 30
+      }
+    }
+  }
+]

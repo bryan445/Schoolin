@@ -1,0 +1,119 @@
+[
+  {
+    "id": "BFS004",
+    "name": "Precious Mkandawire",
+    "guardian": "Mrs. Ellen Mkandawire",
+    "phone": "+265 666 654 321",
+    "email": "ellen.mkandawire@email.com",
+    "address": "House 34, Chilomoni, Blantyre",
+    "dateOfBirth": "2010-04-17",
+    "admissionDate": "2023-02-06",
+    "fees": {
+      "totalOwed": 240000,
+      "totalPaid": 210000,
+      "balance": 30000,
+      "nextPaymentDue": "2024-12-10"
+    },
+    "results": {
+      "term1": {
+        "firstAssessment": {
+          "english": 89,
+          "mathematics": 67,
+          "science": 90,
+          "biology": 86,
+          "chemistry": 83,
+          "date": "2024-03-15",
+          "average": 87.0
+        },
+        "secondAssessment": {
+          "english": 91,
+          "mathematics": 89,
+          "science": 92,
+          "biology": 88,
+          "chemistry": 85,
+          "date": "2024-05-20",
+          "average": 89.0
+        },
+        "finalExam": {
+          "english": 93,
+          "mathematics": 91,
+          "science": 94,
+          "biology": 90,
+          "chemistry": 87,
+          "date": "2024-07-10",
+          "average": 91.0
+        },
+        "termAverage": 89.0,
+        "termGrade": "A",
+        "position": 1,
+        "totalStudents": 24
+      },
+      "term2": {
+        "firstAssessment": {
+          "english": 91,
+          "mathematics": 90,
+          "science": 92,
+          "biology": 88,
+          "chemistry": 86,
+          "date": "2024-09-15",
+          "average": 89.4
+        },
+        "secondAssessment": {
+          "english": 93,
+          "mathematics": 92,
+          "science": 94,
+          "biology": 90,
+          "chemistry": 88,
+          "date": "2024-11-20",
+          "average": 91.4
+        },
+        "finalExam": {
+          "english": 95,
+          "mathematics": 94,
+          "science": 96,
+          "biology": 92,
+          "chemistry": 90,
+          "date": "2025-01-10",
+          "average": 93.4
+        },
+        "termAverage": 91.4,
+        "termGrade": "A+",
+        "position": 1,
+        "totalStudents": 24
+      },
+      "term3": {
+        "firstAssessment": {
+          "english": 93,
+          "mathematics": 92,
+          "science": 94,
+          "biology": 90,
+          "chemistry": 88,
+          "date": "2025-03-15",
+          "average": 91.4
+        },
+        "secondAssessment": {
+          "english": 95,
+          "mathematics": 94,
+          "science": 96,
+          "biology": 92,
+          "chemistry": 90,
+          "date": "2025-05-20",
+          "average": 93.4
+        },
+        "finalExam": {
+          "english": 97,
+          "mathematics": 96,
+          "science": 98,
+          "biology": 94,
+          "chemistry": 92,
+          "date": "2025-07-10",
+          "average": 95.4
+        },
+        "termAverage": 93.4,
+        "termGrade": "A+",
+        "position": 1,
+        "totalStudents": 24
+      }
+    }
+  }
+]

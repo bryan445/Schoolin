@@ -1,0 +1,86 @@
+{
+  "name": "Soba",
+  "location": "Mzuzu",
+  "motto": "Rising to Excellence, Shining with Purpose",
+  "fees": "MK 180,000 per term",
+  "detailedFees": {
+    "nursery": {
+      "level": "Pre-School (3-5 years)",
+      "tuitionFee": "MK 85,000 per term",
+      "admissionFee": "MK 16,500 (one-time)",
+      "developmentFee": "MK 28,000 per year",
+      "uniformFee": "MK 38,000 (optional)",
+      "booksAndMaterials": "MK 22,000 per year",
+      "total": "MK 100,000 per term (excluding one-time fees)"
+    },
+    "primary": {
+      "level": "Primary School (Standard 1-8)",
+      "tuitionFee": "MK 140,000 per term",
+      "admissionFee": "MK 22,500 (one-time)",
+      "developmentFee": "MK 38,000 per year",
+      "uniformFee": "MK 48,000 (optional)",
+      "booksAndMaterials": "MK 32,000 per year",
+      "examFees": "MK 16,500 per year",
+      "sportsAndActivities": "MK 12,000 per year",
+      "total": "MK 155,000 per term (excluding one-time fees)"
+    },
+    "secondary": {
+      "level": "High School (Form 1-4)",
+      "tuitionFee": "MK 180,000 per term",
+      "admissionFee": "MK 27,500 (one-time)",
+      "developmentFee": "MK 48,000 per year",
+      "uniformFee": "MK 58,000 (optional)",
+      "booksAndMaterials": "MK 42,000 per year",
+      "examFees": "MK 28,000 per year (MSCE: MK 38,000)",
+      "laboratoryFee": "MK 22,000 per year",
+      "sportsAndActivities": "MK 15,000 per year",
+      "total": "MK 195,000 per term (excluding one-time fees)"
+    },
+    "additionalInfo": "Flexible payment terms available. Family discount of 8% for 2+ children. Outstanding academic performance rewards include fee waivers. Boarding facilities available at MK 80,000 per term. All fees include meals and accommodation for boarders."
+  },
+  "results": "Check the notice board for published results.",
+  "about": "Founded in 1978, Sunrise High School is one of the most prestigious institutions in Northern Malawi. We pride ourselves on academic excellence, sports achievements, and producing well-rounded graduates who contribute positively to society.",
+  "admissionInfo": {
+    "requirements": "Birth certificate, School leaving certificate, Medical report, 3 passport photos",
+    "process": "Download application form from website, Submit completed form with required documents, Pay application fee MK 6,500, Attend assessment day",
+    "deadline": "Applications close on February 28th each year",
+    "contact": "Phone: +265 1 987 654 | Email: admissions@sunrise.edu.mw"
+  },
+  "news": [
+    {
+      "title": "Outstanding MSCE Results",
+      "date": "2025-01-12",
+      "content": "We are proud to announce that 98% of our Form 4 students passed their MSCE examinations with flying colors. 85% achieved 6 credits or more."
+    },
+    {
+      "title": "Inter-School Football Champions",
+      "date": "2024-12-18",
+      "content": "Our football team has won the Northern Region Inter-School Championship for the third consecutive year. The team will represent the region at nationals."
+    },
+    {
+      "title": "Scholarship Program Launch",
+      "date": "2024-12-05",
+      "content": "We have launched a scholarship program for academically gifted but financially disadvantaged students. Applications are now open for the 2025 academic year."
+    }
+  ],
+  "announcements": [
+    {
+      "title": "Mock Examinations Schedule",
+      "date": "2025-01-16",
+      "content": "Form 4 mock examinations will commence on February 5th. Students should collect their timetables from the academic office.",
+      "urgent": true
+    },
+    {
+      "title": "Career Guidance Workshop",
+      "date": "2025-01-13",
+      "content": "Career guidance workshop for Form 3 and 4 students scheduled for January 30th. Guest speakers from various professions will attend.",
+      "urgent": false
+    },
+    {
+      "title": "School Uniform Reminder",
+      "date": "2025-01-09",
+      "content": "All students must be in proper school uniform. The dress code will be strictly enforced starting next week.",
+      "urgent": false
+    }
+  ]
+}
