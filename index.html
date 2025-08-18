@@ -4,74 +4,286 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Schoolin</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      
-      body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        overflow-x: hidden;
-      }
-      
-      /* Dark mode styles */
-      .dark {
-        --bg-color: #1a202c;
-        --text-color: #e2e8f0;
-        --card-bg: #2d3748;
-        --border-color: #4a5568;
-      }
-      
-      .dark body {
-        background-color: var(--bg-color);
-        color: var(--text-color);
-      }
-      
-      @keyframes slideIn {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      
-      /* Scrollbar styling */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-      }
-      
-      ::-webkit-scrollbar-thumb {
-        background: #667eea;
-        border-radius: 10px;
-      }
-      
-      ::-webkit-scrollbar-thumb:hover {
-        background: #5a6fd8;
-      }
-    </style>
-    <script type="module" crossorigin src="/Schoolin/assets/index-DkFTMFM8.js"></script>
+    <link rel="stylesheet" crossorigin href="/Schoolin/assets/index-d7qOaG4k.css">
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Dark Mode Toggle Button -->
+    <div class="dark-mode-toggle">
+      <button id="darkModeBtn" aria-label="Toggle dark mode">
+        🌙 Dark Mode
+      </button>
+    </div>
+
+    <!-- Main App Container -->
+    <div id="app">
+      <!-- Home Page -->
+      <div id="homePage" class="page active">
+        <div class="container">
+          <div class="header">
+            <h1 class="title">Schoolin</h1>
+            <p class="subtitle">Your Gateway to School Information</p>
+          </div>
+          
+          <div class="search-container">
+            <div class="search-bar">
+              <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search schools by name or location..."
+                aria-label="Search schools by name or location"
+              />
+              <div class="search-icon">🔍</div>
+            </div>
+          </div>
+          
+          <!-- Flash Cards -->
+          <div id="flashCards" class="flash-cards">
+            <div class="flash-card-container">
+              <div class="flash-card active" data-index="0">
+                <div class="icon-container">📰</div>
+                <h3 class="card-title">Stay Updated</h3>
+                <p class="card-subtitle">School Information</p>
+                <p class="card-description">Get the latest school announcements, news, and important updates from your institution</p>
+              </div>
+              <div class="flash-card" data-index="1">
+                <div class="icon-container">📊</div>
+                <h3 class="card-title">Monitor Performance</h3>
+                <p class="card-subtitle">Academic Progress</p>
+                <p class="card-description">Track your academic performance, view detailed results, and monitor your educational journey</p>
+              </div>
+              <div class="flash-card" data-index="2">
+                <div class="icon-container">💰</div>
+                <h3 class="card-title">Check School Fees</h3>
+                <p class="card-subtitle">Financial Information</p>
+                <p class="card-description">View fee structures, check payment status, and manage your school financial obligations</p>
+              </div>
+              <div class="flash-card" data-index="3">
+                <div class="icon-container">📝</div>
+                <h3 class="card-title">Examination Results</h3>
+                <p class="card-subtitle">Academic Achievement</p>
+                <p class="card-description">Access your exam results, grades, and comprehensive academic reports instantly</p>
+              </div>
+            </div>
+            <div class="indicators">
+              <div class="indicator active" data-index="0"></div>
+              <div class="indicator" data-index="1"></div>
+              <div class="indicator" data-index="2"></div>
+              <div class="indicator" data-index="3"></div>
+            </div>
+          </div>
+          
+          <!-- Schools Grid -->
+          <div id="schoolsGrid" class="schools-grid hidden">
+            <!-- Schools will be populated by JavaScript -->
+          </div>
+          
+          <div id="noResults" class="no-results hidden">
+            No schools found matching "<span id="queryText"></span>"
+          </div>
+        </div>
+      </div>
+
+      <!-- School Page -->
+      <div id="schoolPage" class="page">
+        <div class="container">
+          <!-- Loading State -->
+          <div id="loadingState" class="loading-state">
+            Loading school information...
+          </div>
+          
+          <!-- Error State -->
+          <div id="errorState" class="error-state hidden">
+            <div class="error-content">
+              <div class="error-icon">❌</div>
+              <div>Error loading school information:</div>
+              <div id="errorMessage" class="error-message"></div>
+              <button id="retryBtn" class="retry-btn">Retry</button>
+            </div>
+          </div>
+          
+          <!-- School Content -->
+          <div id="schoolContent" class="school-content hidden">
+            <div class="school-header">
+              <div class="school-info-header">
+                <img id="schoolLogo" class="school-logo" alt="School Logo" />
+                <div class="school-info">
+                  <h1 id="schoolName" class="school-name"></h1>
+                  <div id="schoolMotto" class="motto"></div>
+                  <div class="compact-buttons">
+                    <button class="compact-button" id="feeBtn" title="School Fees" aria-label="View school fees">💰</button>
+                    <button class="compact-button" id="accountBtn" title="Account Details" aria-label="View account details">👤</button>
+                    <button class="compact-button" id="resultsBtn" title="Exam Results" aria-label="View exam results">📊</button>
+                    <button class="compact-button" id="admissionBtn" title="Admission" aria-label="View admission information">🎓</button>
+                  </div>
+                </div>
+              </div>
+              <div class="back-button-container">
+                <a href="#" id="backBtn" class="back-button">← Back to Schools</a>
+              </div>
+            </div>
+
+            <div class="tabs">
+              <div class="tab active" data-tab="overview">Overview</div>
+              <div class="tab" data-tab="about">About</div>
+              <div class="tab" data-tab="admission">Admission</div>
+            </div>
+
+            <div class="tab-content">
+              <div id="overviewTab" class="tab-pane active">
+                <!-- Announcements -->
+                <div class="section">
+                  <h3 class="section-title">📢 Latest Announcements</h3>
+                  <div id="announcements" class="news-grid"></div>
+                </div>
+                
+                <!-- News -->
+                <div class="section">
+                  <h3 class="section-title">📰 School News</h3>
+                  <div id="news" class="news-grid"></div>
+                </div>
+              </div>
+              
+              <div id="aboutTab" class="tab-pane">
+                <div class="section">
+                  <h3 class="section-title">📖 About <span id="aboutSchoolName"></span></h3>
+                  <p id="aboutText" class="about-text"></p>
+                </div>
+              </div>
+              
+              <div id="admissionTab" class="tab-pane">
+                <div class="section">
+                  <h3 class="section-title">🎓 Admission Information</h3>
+                  <div class="admission-section">
+                    <div class="admission-item">
+                      <div class="admission-label">Requirements:</div>
+                      <div id="admissionRequirements"></div>
+                    </div>
+                    <div class="admission-item">
+                      <div class="admission-label">Application Process:</div>
+                      <div id="admissionProcess"></div>
+                    </div>
+                    <div class="admission-item">
+                      <div class="admission-label">Application Deadline:</div>
+                      <div id="admissionDeadline"></div>
+                    </div>
+                    <div class="admission-item">
+                      <div class="admission-label">Contact Information:</div>
+                      <div id="admissionContact"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Panel -->
+      <div class="contact-panel">
+        <div class="contact-container">
+          <div class="contact-section">
+            <h3 class="section-title">Connect With Us</h3>
+            <div class="social-icons">
+              <a href="https://facebook.com/schoolin" target="_blank" rel="noopener noreferrer" class="social-icon facebook-icon" aria-label="Visit our Facebook page">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="https://wa.me/265999123456" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp-icon" aria-label="Contact us on WhatsApp">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.49 3.488"/>
+                </svg>
+              </a>
+              <a href="mailto:info@schoolin.mw" class="social-icon email-icon" aria-label="Send us an email">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                  <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.91L12 10.09l9.455-6.269h.909c.904 0 1.636.732 1.636 1.636"/>
+                </svg>
+              </a>
+              <a href="tel:+265999123456" class="social-icon phone-icon" aria-label="Call us">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-section">
+            <h3 class="section-title">Contact Information</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <span>+265 999 123 456</span>
+              </div>
+              <div class="contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.91L12 10.09l9.455-6.269h.909c.904 0 1.636.732 1.636 1.636"/>
+                </svg>
+                <span>info@schoolin.mw</span>
+              </div>
+              <div class="contact-item">
+                📍 <span>Lilongwe, Malawi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-section">
+            <h3 class="section-title">Office Hours</h3>
+            <div class="contact-info">
+              <div>Monday - Friday</div>
+              <div>8:00 AM - 5:00 PM</div>
+              <div style="margin-top: 10px;">Saturday</div>
+              <div>9:00 AM - 2:00 PM</div>
+              <div style="margin-top: 10px;">Sunday: Closed</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <p>&copy; 2025 Schoolin. All rights reserved. | Making education accessible to everyone.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="studentLoginModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="loginTitle">Student Login</h2>
+          <button class="close-btn" id="closeLoginModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="studentId">Student ID:</label>
+              <input type="text" id="studentId" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" required>
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="feeModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>School Fees</h2>
+          <button class="close-btn" id="closeFeeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div id="feeContent">
+            <!-- Fee content will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
